@@ -1,0 +1,18 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+        <img src="assets/img/admin.png" class="img-fluid" alt="">
+    </div>
+
+    <!-- Login Form -->
+    <form (ngSubmit)="submit()">
+      <input type="text" [(ngModel)]="adminlogin.username" id="username" class="fadeIn second" name="username" placeholder="Admin" required>
+      <input type="text" [(ngModel)]="adminlogin.password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+  </div>
+</div>

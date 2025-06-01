@@ -1,0 +1,81 @@
+<!-- Contact Section -->
+      <section id="contact" class="contact section">
+  
+        <div class="mb-5">
+          <iframe style="width: 100%; height: 400px;" src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.458220631472!2d88.45962807603536!3d22.97017171828022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89564caa7a33f%3A0x212bbd6b2b75b34f!2sTECHNO%20LAB%20KALYANI!5e0!3m2!1sen!2sin!4v1743220477207!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+        </div><!-- End Google Maps -->
+  
+        <div class="container" data-aos="fade">
+  
+          <div class="row gy-5 gx-lg-5">
+  
+            <div class="col-lg-4">
+  
+              <div class="info">
+                <h3>Get in touch</h3>
+                <p>Industry mentors, real-world projects, freelancing guidance, career support</p>
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h4>Location:</h4>
+                    <p>A-8/90, near Vidhyasagar Manch</p>
+                    <p>Kalyani, West Bengal 741235</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h4>Email:</h4>
+                    <p>rathinkly&#64;gmail.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-phone flex-shrink-0"></i>
+                  <div>
+                    <h4>Call:</h4>
+                    <p>+91 9748 9208 36</p>
+                    <p>+91 8100 9174 43</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-8">
+              <form action="" (ngSubmit)="sendEmail()" #contactForm="ngForm" method="POST" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" [(ngModel)]="emailData.name" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" [(ngModel)]="emailData.email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" [(ngModel)]="emailData.subject" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" [(ngModel)]="emailData.message" name="message" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div><!-- End Contact Form  (click)="submit()"-->
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /Contact Section -->
+
+  
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -1,0 +1,25 @@
+.user-icon, .heart-icon {
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.user-icon:hover, .heart-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Apply red color when clicked */
+.clicked {
+  color: red;
+}
+.share-icon {
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.share-icon:hover {
+  transform: scale(1.1);
+}
+
+.clicked {
+  color: red;
+}
