@@ -91,7 +91,12 @@ register()
     alert("Register Successfuly")
     this.getAllRegistration();
   });
+
+   //page Reload after submit**
+        window.location.reload();
 }
+
+
 
  setUpdate(data: any) 
   {
