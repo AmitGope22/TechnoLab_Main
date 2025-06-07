@@ -49,7 +49,7 @@ ngOnInit(): void {
 
 getAllRegistration()
 {
-  this.http.get("http://localhost:8085/api/registration/")
+  this.http.get("http://localhost:3000/api/registration/")
   .subscribe((resultData: any)=>
   {
     this.isResultLoaded = true;
@@ -85,7 +85,7 @@ register()
 
   };
 
-  this.http.post("http://localhost:8085/api/registration/add/", bodyData).subscribe((resultData: any)=>
+  this.http.post("http://localhost:3000/api/registration/add/", bodyData).subscribe((resultData: any)=>
   {
     console.log(resultData);
     alert("Register Successfuly")
@@ -149,7 +149,7 @@ register()
     "message" : this.message
     };
     
-    this.http.put("http://localhost:8085/api/registration/update"+ "/"+ this.CurrentRegistrationID,bodyData).subscribe((resultData: any)=>
+    this.http.put("http://localhost:3000/api/registration/update"+ "/"+ this.CurrentRegistrationID,bodyData).subscribe((resultData: any)=>
     {
         console.log(resultData);
         alert("Student Registration Updated Successfully")
@@ -171,7 +171,7 @@ register()
   }
   setDelete(data: any)
   {
-    this.http.delete("http://localhost:8085/api/registration/delete"+ "/"+ data.id).subscribe((resultData: any)=>
+    this.http.delete("http://localhost:3000/api/registration/delete"+ "/"+ data.id).subscribe((resultData: any)=>
     {
         console.log(resultData);
         alert("Registration Deleted Successfully")
