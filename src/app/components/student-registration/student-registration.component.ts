@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-student-registration',
@@ -7,12 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-registration.component.css']
 })
 export class StudentRegistrationComponent {
+    RegistrationArray: any[] = [];
+    filteredRegistrations: any[] = [];
 
+   constructor(private http: HttpClient )
+  {
+    this.getAllRegistration();
+  }
+  
+
+  //Excel Button for export data.
+  exportToExcel(): void {
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.RegistrationArray);
+    const workbook: XLSX.WorkBook = { Sheets: { 'Student Data': worksheet }, SheetNames: ['Student Data'] };
+    
+    // ✅ Save the file
+    XLSX.writeFile(workbook, 'student_registration.xlsx');
+  }
+
+
+  //Submit button
   submit() {
   throw new Error('Method not implemented.');
   }
   
-    RegistrationArray : any[] = [];
+    // RegistrationArray : any[] = [];
     isResultLoaded = false;
     isUpdateFormActive = false;
   
@@ -40,11 +60,7 @@ export class StudentRegistrationComponent {
     message: string ="";
     CurrentRegistrationID = "";
   
-  constructor(private http: HttpClient )
-  {
-    this.getAllRegistration();
-  }
-  
+
   ngOnInit(): void {
   }
   
@@ -117,9 +133,7 @@ export class StudentRegistrationComponent {
      this.subject = data.subject;
      this.coursetype = data.coursetype;
      this.message = data.message;
-     
-  
-    
+         
      this.CurrentRegistrationID = data.id;
    
     }
