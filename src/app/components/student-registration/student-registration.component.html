@@ -1,6 +1,10 @@
 <section class="view">
+    <u><h2 class="text-center">Online Registration Details</h2></u>
+    
+    <!-- Excel button (Installed: npm install xlsx) -->
+    <button (click)="exportToExcel()" class="btn btn-success">Export to Excel</button>
+    <div class="container mt-1">
 <div class="table-responsive">
-    <h2 class="text-center">Registration Table</h2>
     <table class="table table-striped table-bordered table-responsive">
         <thead class="table-dark">
           <h1 *ngIf="!isResultLoaded">Loading.................</h1>
@@ -55,11 +59,11 @@
 
                 <td>
                   <button type="button" class="btn btn-success" (click)="setUpdate(RegistrationItem)">Edit</button>
-
                   <button type="button" class="btn btn-danger" (click)="setDelete(RegistrationItem)">Delete</button>            
                 </td>
         </tbody>
     </table>
+    </div>
 </div>
 
 </section>
