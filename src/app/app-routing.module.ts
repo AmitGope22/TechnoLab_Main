@@ -15,6 +15,7 @@ import { ComputerTrainingComponent } from './components/computer-training/comput
 import { OnlineApplicationComponent } from './components/online-application/online-application.component';
 import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
+import { ViewContactComponent } from './components/view-contact/view-contact.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path:'Appy-online' , component:OnlineApplicationComponent},
   {path:'page_not_found' , component:PageNotfoundComponent},
   {path:'View_registration' , component:StudentRegistrationComponent},
+  {path: 'view-contact' , component:ViewContactComponent},
 
 
   {path:'admin' , component:AdminPanelComponent},

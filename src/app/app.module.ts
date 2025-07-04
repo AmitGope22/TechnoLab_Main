@@ -23,6 +23,7 @@ import { ComputerTrainingComponent } from './components/computer-training/comput
 import { OnlineApplicationComponent } from './components/online-application/online-application.component';
 import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
+import { ViewContactComponent } from './components/view-contact/view-contact.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { StudentRegistrationComponent } from './components/student-registration/
     OnlineApplicationComponent,
     PageNotfoundComponent,
     StudentRegistrationComponent,
+    ViewContactComponent,
   ],
   imports: [
     BrowserModule,
